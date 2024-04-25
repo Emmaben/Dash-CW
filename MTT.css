@@ -1,0 +1,83 @@
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
+  margin: 30px 50px;
+}
+
+.team-member-card {
+  flex: 0 0 calc(50% - 20px); /* Two cards per row on larger screens */
+  max-width: calc(50% - 20px);
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* XS */
+@media (max-width: 475px) {
+  .container {
+    position: relative;
+    top: 5%;
+  }
+  .team-member-card {
+    flex: 0 0 calc(100% - 20px); /* One card per row on smaller screens */
+    width: 90vw;
+  }
+}
+
+/* Medium */
+@media (max-width: 768px) {
+  .team-member-card {
+      flex: 0 0 calc(100% - 20px); /* One card per row on smaller screens */
+      max-width: calc(100% - 20px);
+      height: 55%;
+  }
+}
+
+.team-member-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.member-details {
+    text-align: center;
+}
+
+.member-details h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.member-details p {
+    margin-bottom: 5px;
+    color: var(--clr-light);
+    font-size: var(--size-sm);
+}
+
+.member-details p span {
+    font-size: var(--size-base);
+    color: var(--clr-slate800);
+}
+.member-details .role {
+    font-style: italic;
+    font-size: var(--size-xl);
+    color: var(--clr-slate800);
+}
+
+.member-details .social-icons a {
+    color: var(--clr-light);
+    font-size: 20px;
+    margin: 0 5px;
+    transition: .8s transform ease;
+}
+
+.member-details .social-icons a:hover {
+  transform: scale(1.8);
+}
+
+
